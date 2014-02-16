@@ -6,7 +6,7 @@ html, body {
     bottom: 0;
 }
 
-#left {
+#leftDiv {
     right: 50%;
     left: 0;
     top: 0;
@@ -15,7 +15,7 @@ html, body {
     position: absolute;
 }
 
-#right {
+#rightDiv {
     top: 0;
     right: 0;
     left: 50%;
@@ -24,7 +24,7 @@ html, body {
     bottom: 0;
 }
 
-#centerSplitter {
+#splitterDiv {
     width: 6px;
     background: linear-gradient(to right, #21374c 0%, #004966 30%, #21374c 100%);
 }

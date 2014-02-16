@@ -10,7 +10,7 @@ define(function () {
 
 		var options = opts || {},
 			clicked,
-			expandLocation = '20%',
+			expandLocation,
 			bounds;
 
 		options.orientation = opts.orientation || 'vertical';
@@ -50,8 +50,19 @@ define(function () {
 
 			if (clicked) {
 				if (options.orientation === 'horizontal') {
-					options.elementOne.style.bottom = options.elementOne.style.height = e.y + "px";
-					options.elementTwo.style.top = options.splitter.style.top = options.elementOne.style.bottom;
+					options.elementOne.textContent = "window height: " + window.innerHeight + " Mouse Y coordinate: " + e.y + " = " + (window.innerHeight - e.y) + "px";
+
+					options.elementOne.style.bottom = (window.innerHeight - e.y) + "px";
+					options.elementTwo.style.top = options.splitter.style.top = window.innerHeight - (window.innerHeight - e.y) + "px";
+
+					//options.elementOne.style.bottom = options.elementOne.style.height = e.y + "px";
+
+					//options.elementOne.textContent = options.elementOne.style.bottom = (window.innerHeight - e.y) + "px"
+					//options.splitter.style.bottom = window.innerHeight - (window.innerHeight - e.y + 8) + "px";
+
+					//options.splitter.style.bottom = (window.innerHeight - e.y - options.splitter.style.height) + "px";;
+
+					//options.elementTwo.style.top =(window.innerHeight - e.y) + "px";
 				}
 				else {
 					options.elementOne.style.right = options.elementOne.style.width = e.x + "px";
@@ -62,6 +73,7 @@ define(function () {
 
 		var doubleClickHandler = function () {
 			if (options.orientation === 'horizontal') {
+
 				if (options.collapse === 'top') {
 					if (options.splitter.style.top === '0px') {
 						options.elementOne.style.bottom = options.splitter.style.top = options.elementTwo.style.top = expandLocation;
@@ -72,12 +84,13 @@ define(function () {
 						options.elementOne.style.visibility = 'hidden';
 					}
 				} else if (options.collapse === 'bottom') {
-					if (options.splitter.style.right === '0px') {
+					if (options.splitter.getBoundingClientRect().bottom == 0) {
 						options.elementOne.style.bottom = options.splitter.style.top = options.elementTwo.style.top = expandLocation;
+						//options.elementOne.style.bottom = options.splitter.style.top = options.elementTwo.style.top = options;
 						options.elementTwo.style.visibility = 'visible';
 					} else {
 						expandLocation = options.splitter.style.top;
-						options.splitter.style.bottom = 0;
+						options.splitter.style.bottom = options.elementOne.style.bottom = (window.innerHeight - options.elementTwo.getBoundingClientRect().bottom) + "px";
 						options.splitter.style.top = '';
 						options.elementTwo.style.visibility = 'hidden';
 					}
@@ -122,6 +135,7 @@ define(function () {
 			options.elementTwo.addEventListener('mousemove', mouseMoveHandler);
 
 			document.body.addEventListener('mouseup', mouseUpHandler);
+			//document.body.addEventListener('mousemove', mouseMoveHandler);
 		};
 
 		var render = function () {

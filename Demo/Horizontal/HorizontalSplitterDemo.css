@@ -1,0 +1,38 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    background-color: whitesmoke;
+    bottom: 0;
+}
+
+#topDiv {
+    top: 0;
+    bottom: 497px;
+    left: 0;
+    right: 0;
+    background-color: coral;
+    position: absolute;
+}
+
+#bottomDiv {
+    top: 498px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: lightgreen;
+    position: absolute;
+}
+
+#splitterDiv {
+    height: 6px;
+    background: linear-gradient(to right, #21374c 0%, #004966 30%, #21374c 100%);
+}
+
+.unselectable {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
