@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SplitterJS - Horizontal Splitter Demo</title>
+    <link href="./ThreeHorizontalSplittersDemo.css" rel="stylesheet" type="text/css">
+    <script src="http://www.requirejs.org/docs/release/2.1.10/minified/require.js"></script>
+</head>
+<body>
+
+<div id=headerDiv class="unselectable">Top</div>
+<div id=topDiv class="unselectable">Top</div>
+<div id=bottomDiv class="unselectable">Bottom</div>
+<div id=footerDiv class="unselectable">Footer</div>
+
+<div id=headerSplitterDiv class="horizontalSplitter"></div>
+<div id=splitterDiv class="horizontalSplitter"></div>
+<div id=footerSplitterDiv class="horizontalSplitter"></div>
+
+<script>
+    require(['../../Splitter'], function (Splitter) {
+        new Splitter({
+            elementOne: headerDiv,            // Div to the left of the splitter
+            elementTwo: topDiv,             // Div to the right of the splitter
+            splitter: headerSplitterDiv,         // Splitter div
+            orientation: 'horizontal',      // Orientation [vertical | horizontal]
+            collapse: 'top',                // Collapse Direction [left | right | top | bottom]
+            dummySplitter: false            // Move a dummy splitter instead of refreshing entire content
+        }).Render();
+
+        new Splitter({
+            elementOne: topDiv,            // Div to the left of the splitter
+            elementTwo: bottomDiv,         // Div to the right of the splitter
+            splitter: splitterDiv,         // Splitter div
+            orientation: 'horizontal',     // Orientation [vertical | horizontal]
+            collapse: 'none',               // Collapse Direction [left | right | top | bottom]
+            dummySplitter: true           // Move a dummy splitter instead of refreshing entire content
+        }).Render();
+
+        new Splitter({
+            elementOne: bottomDiv,         // Div to the left of the splitter
+            elementTwo: footerDiv,         // Div to the right of the splitter
+            splitter: footerSplitterDiv,   // Splitter div
+            orientation: 'horizontal',     // Orientation [vertical | horizontal]
+            collapse: 'bottom',            // Collapse Direction [left | right | top | bottom]
+            dummySplitter: false           // Move a dummy splitter instead of refreshing entire content
+        }).Render();
+    });
+</script>
+
+</body>
+</html>

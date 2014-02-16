@@ -115,7 +115,10 @@ define(function () {
                         options.elementTwo.parentNode.appendChild(options.elementOne);
                     } else {
                         expandLocation = options.splitter.style.top;
-                        options.splitter.style.top = options.elementTwo.style.top = (window.innerHeight - options.elementTwo.getBoundingClientRect().bottom) + "px";
+
+                        options.splitter.style.top = options.elementTwo.style.top = ((options.elementOne.getBoundingClientRect().height + options.elementTwo.getBoundingClientRect().height) - options.elementTwo.getBoundingClientRect().bottom) + "px";
+                        //options.splitter.style.top = options.elementTwo.style.top = (window.innerHeight - options.elementTwo.getBoundingClientRect().bottom) + "px";
+
                         options.elementOne.style.bottom = (window.innerHeight - parseInt(options.elementTwo.style.top)) + "px";
                         options.elementOne.parentNode.removeChild(options.elementOne);
                     }
