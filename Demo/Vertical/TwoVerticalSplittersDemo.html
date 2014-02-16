@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SplitterJS - Vertical Splitter Demo</title>
+	<link href="../Splitter.css" type="text/css" rel="stylesheet">
+	<link href="./TwoVerticalSplittersDemo.css" rel="stylesheet" type="text/css">
+	<script src="http://www.requirejs.org/docs/release/2.1.10/minified/require.js"></script>
+</head>
+<body>
+
+<div id=leftDiv class="unselectable">Left</div>
+<div id=content class="unselectable">Content</div>
+<div id=rightDiv class="unselectable">Right</div>
+
+<div id=splitterDiv class="verticalSplitter"></div>
+<div id=splitterDivRight class="verticalSplitter"></div>
+
+<script>
+	require(['../../Splitter'], function (Splitter) {
+		new Splitter({
+			elementOne: leftDiv,       // Div to the left of the splitter
+			elementTwo: content,      // Div to the right of the splitter
+			splitter: splitterDiv,     // Splitter div
+			orientation: 'vertical',   // Orientation [vertical | horizontal]
+			collapse: 'left',          // Collapse Direction [left | right | top | bottom]
+			dummySplitter: true        // Move a dummy splitter instead of refreshing entire content
+		}).Render();
+
+		new Splitter({
+			elementOne: content,       // Div to the left of the splitter
+			elementTwo: rightDiv,      // Div to the right of the splitter
+			splitter: splitterDivRight,     // Splitter div
+			orientation: 'vertical',   // Orientation [vertical | horizontal]
+			collapse: 'right',          // Collapse Direction [left | right | top | bottom]
+			dummySplitter: false        // Move a dummy splitter instead of refreshing entire content
+		}).Render();
+	});
+</script>
+
+</body>
+</html>

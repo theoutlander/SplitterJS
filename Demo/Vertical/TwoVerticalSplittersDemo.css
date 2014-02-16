@@ -7,7 +7,7 @@ html, body {
 }
 
 #leftDiv {
-    right: 50%;
+    right: 75%;
     left: 0;
     top: 0;
     bottom: 0;
@@ -15,10 +15,19 @@ html, body {
     position: absolute;
 }
 
+#content {
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    background-color: wheat;
+    position: absolute;
+}
+
 #rightDiv {
     top: 0;
     right: 0;
-    left: 50%;
+    left: 75%;
     background-color: lightgray;
     position: absolute;
     bottom: 0;

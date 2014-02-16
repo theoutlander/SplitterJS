@@ -1,0 +1,50 @@
+#viewport {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: fixed;
+}
+
+.unselectable {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.verticalSplitter {
+    width: 6px;
+    background: linear-gradient(to right, #21374c 0%, #004966 30%, #21374c 100%);
+}
+
+.horizontalSplitter {
+    height: 6px;
+    background: linear-gradient(to right, #21374c 0%, #004966 30%, #21374c 100%);
+}
+
+/*
+.divstat {
+    margin: 0 auto 0 auto;
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #464646;
+    color: #fff;
+    width: 50%;
+}
+
+.spanstat {
+    font-size: 70px;
+    font-family: 'Segoe UI Light';
+}
+
+.h1stat {
+    margin-top: 0;
+    padding-bottom: 15px;
+    font-family: 'Segoe UI Light';
+    border-bottom: 1px solid #fff;
+}
+*/

@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    background-color: gray;
+    bottom: 0;
+}
+
+#map {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 250px;
+    background-color: coral;
+    position: absolute;
+}
+
+#editor {
+    right: 80%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: lightblue;
+    position: absolute;
+}
+
+#timeline {
+    left: 0;
+    right: 0;
+    top: calc(100% - 250px);
+    bottom: 0;
+    background-color: wheat;
+    position: absolute;
+}
+
+#content {
+    left: 20%;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    background-color: lightseagreen;
+}

@@ -1,28 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Complex Layout</title>
+	<link href="../Splitter.css" type="text/css" rel="stylesheet">
+	<link href="./ComplexLayout.css" type="text/css" rel="stylesheet">
 	<script src="http://requirejs.org/docs/release/2.1.10/minified/require.js"></script>
 </head>
 <body>
 
-<div id=left>Left</div>
-<div id=content>Content</div>
-<div id=right>Right</div>
-<div id=top>Top</div>
-<div id=bottom>Bottom</div>
 
-<div id=leftSplitter></div>
-<div id=rightSplitter></div>
-<div id=topSplitter></div>
-<div id=bottomSplitter></div>
+<div id=viewport class=unselectable>
+
+	<div id=contentContainer class=unselectable>
+		<div id=content class=unselectable>Content</div>
+		<div id=leftDiv class=unselectable>Left</div>
+		<div id=leftsplitter class=verticalSplitter></div>
+		<div id=rightsplitter class=verticalSplitter></div>
+		<div id=rightDiv class=unselectable>Right</div>
+	</div>
+
+	<div id=topDiv class=unselectable>Top</div>
+	<div id=topsplitter class=horizontalSplitter></div>
+
+	<div id=bottomDiv class=unselectable>Bottom</div>
+	<div id=bottomsplitter class=horizontalSplitter></div>
+
+</div>
 
 <script>
-	/* TODO:
-	 require(['../../Splitter'], function(Splitter) {
-	 Splitter.Render()
-	 });
-	 */
+	require(['../../Splitter'], function (Splitter) {
+		new Splitter({
+			elementOne: leftDiv,            // Div to the left of the splitter
+			elementTwo: content,            // Div to the right of the splitter
+			splitter: leftsplitter,         // Splitter div
+			orientation: 'vertical',        // Orientation [vertical | horizontal]
+			collapse: 'left',               // Collapse Direction [left | right | top | bottom | fixed]
+			dummySplitter: true             // Move a dummy splitter instead of refreshing entire content
+		}).Render();
+
+		new Splitter({
+			elementOne: content,            // Div to the left of the splitter
+			elementTwo: rightDiv,           // Div to the right of the splitter
+			splitter: rightsplitter,        // Splitter div
+			orientation: 'vertical',        // Orientation [vertical | horizontal]
+			collapse: 'right',              // Collapse Direction [left | right | top | bottom | fixed]
+			dummySplitter: false            // Move a dummy splitter instead of refreshing entire content
+		}).Render();
+
+		Splitter({
+			elementOne: topDiv,             // Div to the left of the splitter
+			elementTwo: contentContainer,   // Div to the right of the splitter
+			splitter: topsplitter,          // Splitter div
+			orientation: 'horizontal',      // Orientation [vertical | horizontal]
+			collapse: 'fixed',              // Collapse Direction [left | right | top | bottom | fixed]
+			dummySplitter: false,           // Move a dummy splitter instead of refreshing entire content
+			splitterHeight: '0px'           // Control the splitter height
+		}).Render();
+
+		new Splitter({
+			elementOne: contentContainer,   // Div to the left of the splitter
+			elementTwo: bottomDiv,          // Div to the right of the splitter
+			splitter: bottomsplitter,       // Splitter div
+			orientation: 'horizontal',      // Orientation [vertical | horizontal]
+			collapse: 'bottom',             // Collapse Direction [left | right | top | bottom | fixed]
+			dummySplitter: false            // Move a dummy splitter instead of refreshing entire content
+		}).Render();
+	});
 </script>
 
 </body>

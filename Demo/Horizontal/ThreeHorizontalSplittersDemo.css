@@ -41,16 +41,3 @@ html, body {
     background-color: orange;
     position: absolute;
 }
-
-.horizontalSplitter {
-    height: 6px;
-    background: linear-gradient(to right, #21374c 0%, #004966 30%, #21374c 100%);
-}
-
-.unselectable {
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}

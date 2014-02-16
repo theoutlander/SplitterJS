@@ -1,0 +1,60 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    background-color: gray;
+    bottom: 0;
+}
+
+#topDiv {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: calc(100% - 100px);
+    background-color: coral;
+    position: absolute;
+}
+
+#leftDiv {
+    right: 80%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: lightblue;
+    position: absolute;
+}
+
+#content {
+    left: 20%;
+    right: 20%;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    background-color: lightseagreen;
+}
+
+#rightDiv {
+    top: 0;
+    right: 0;
+    left: 80%;
+    bottom: 0;
+    background-color: lightgray;
+    position: absolute;
+}
+
+#bottomDiv {
+    right: 0;
+    background-color: lightgreen;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: calc(100% - 100px);
+}
+
+#contentContainer {
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100px;
+    position: absolute;
+}
