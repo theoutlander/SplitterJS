@@ -8,7 +8,7 @@ html, body {
 
 #topDiv {
     top: 0;
-    bottom: 497px;
+    bottom: 50%;
     left: 0;
     right: 0;
     background-color: coral;
@@ -16,7 +16,7 @@ html, body {
 }
 
 #bottomDiv {
-    top: 498px;
+    top: 50%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -24,7 +24,7 @@ html, body {
     position: absolute;
 }
 
-#splitterDiv {
+.horizontalSplitter {
     height: 6px;
     background: linear-gradient(to right, #21374c 0%, #004966 30%, #21374c 100%);
 }

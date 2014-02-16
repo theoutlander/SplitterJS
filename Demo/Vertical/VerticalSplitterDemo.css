@@ -24,7 +24,7 @@ html, body {
     bottom: 0;
 }
 
-#splitterDiv {
+.verticalsplitter {
     width: 6px;
     background: linear-gradient(to right, #21374c 0%, #004966 30%, #21374c 100%);
 }
