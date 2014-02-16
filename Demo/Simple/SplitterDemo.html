@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="./SplitterDemo.css" rel="stylesheet" type="text/css">
+	<script src="http://www.requirejs.org/docs/release/2.1.10/minified/require.js"></script>
+</head>
+<body>
+
+<div id=left class="unselectable">Left</div>
+<div id=right class="unselectable">Right</div>
+
+<div id=centerSplitter></div>
+
+<script>
+	require(['../../Splitter'], function (Splitter) {
+		new Splitter({
+			elementOne: left,
+			elementTwo: right,
+			splitter: centerSplitter,
+			orientation: 'vertical',
+			collapse: 'left'
+		}).Render();
+	});
+
+</script>
+
+</body>
+</html>
