@@ -1,0 +1,4 @@
+SplitterJS
+==========
+
+Javascript Splitter
