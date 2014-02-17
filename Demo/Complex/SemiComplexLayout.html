@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Semi Complex Layout</title>
-	<link href="../Splitter.css" type="text/css" rel="stylesheet">
+	<link href="../../Splitter.css" type="text/css" rel="stylesheet">
 	<link href="SemiComplexLayout.css" type="text/css" rel="stylesheet">
 	<script src="http://requirejs.org/docs/release/2.1.10/minified/require.js"></script>
 </head>
@@ -20,7 +20,7 @@
 
 <script>
 	require(['../../Splitter'], function (Splitter) {
-		var left = new Splitter({
+		new Splitter({
 			elementOne: editor, // Div to the left of the splitter
 			elementTwo: content, // Div to the right of the splitter
 			splitter: leftsplitter, // Splitter div
@@ -29,7 +29,7 @@
 			dummySplitter: false // Move a dummy splitter instead of refreshing entire content
 		}).Render();
 
-		var top = new Splitter({
+		new Splitter({
 			elementOne: map, // Div to the left of the splitter
 			elementTwo: timeline, // Div to the right of the splitter
 			splitter: topsplitter, // Splitter div

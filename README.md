@@ -1,34 +1,35 @@
 **Simple Javascript Splitter with no 3rd party dependencies.**
 
-### Usage: Vertical splitter between two divs
+### Usage:
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title></title>
-        <link href="VerticalSplitterDemo.css" rel="stylesheet" type="text/css">
-        <script src="http://www.requirejs.org/docs/release/2.1.10/minified/require.js"></script>
-    </head>
-    <body>
+    require(['Splitter'], function (Splitter) {
+        new Splitter({
+            elementOne: contentContainer,   // Div to the left of the splitter
+			elementTwo: bottomDiv,          // Div to the right of the splitter
+			splitter: bottomsplitter,       // Splitter div
+			orientation: 'horizontal',      // Orientation [vertical | horizontal]
+			collapse: 'bottom',             // Collapse Direction [left | right | top | bottom | fixed]
+			dummySplitter: false,           // Move a dummy splitter instead of refreshing entire content
+			splitterHeight: '5px'           // Overwrite the splitter height / width
+        }).Render();
+    });
 
-    <div id=leftDiv class="unselectable">Left</div>
-    <div id=rightDiv class="unselectable">Right</div>
+### Vertical splitter:
+![25_screenshot 2014-02-16 15 56 47](https://f.cloud.github.com/assets/749084/2181793/f97e0612-9766-11e3-8bd4-97827cabe685.png)
 
-    <div id=splitterDiv class="verticalsplitter"></div>
+http://jsfiddle.net/theoutlander/dCwS9/
 
-    <script>
-        require(['../../Splitter'], function (Splitter) {
-            new Splitter({
-                elementOne: leftDiv,       // Div to the left of the splitter
-                elementTwo: rightDiv,      // Div to the right of the splitter
-                splitter: splitterDiv,     // Splitter div
-                orientation: 'vertical',   // Orientation [vertical | horizontal]
-                collapse: 'left',          // Collapse Direction [left | right | top | bottom]
-                dummySplitter: true        // Move a dummy splitter instead of refreshing entire content
-            }).Render();
-        });
-    </script>
+***
 
-    </body>
-    </html>
+### Simple Layout
+![25_screenshot 2014-02-16 15 52 22](https://f.cloud.github.com/assets/749084/2181794/f97e1ba2-9766-11e3-945a-377a03e36c61.png)
 
+http://jsfiddle.net/theoutlander/9NQ8g/
+
+***
+
+### Complex Layout
+
+![23_screenshot 2014-02-16 15 51 10](https://f.cloud.github.com/assets/749084/2181792/f97da154-9766-11e3-9017-9b0b750a3f78.png)
+
+http://jsfiddle.net/theoutlander/ULFWP/
