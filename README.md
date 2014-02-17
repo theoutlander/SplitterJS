@@ -18,7 +18,7 @@
 			orientation: 'horizontal',      // Orientation [vertical | horizontal]
 			collapse: 'bottom',             // Collapse Direction [left | right | top | bottom | fixed]
 			placeholderSplitter: false,     // Drag a placeholder splitter
-			splitterHeight: '5px'           // Overwrite the splitter height / width
+			splitterHeight: '5px'           // Control the thickness of the splitter
 		}).Render();
 	});
 
