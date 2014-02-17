@@ -1,12 +1,12 @@
 ### Features
 * Plug-n-Play
-* Horizontal or Vertical
-* Fixed or Collapsible
+* Orientation: Horizontal | Vertical
+* Splitter: Fixed | Collapsible
 * Dummy splitter to control on-drag behaviour
-* Responsive (Edge-case bugs being worked on)
+* Responsive
 * Demo Layouts with links to fiddles
 * Zero dependencies
-* < 1KB Minified (Not checked in yet)
+* < 1KB Minified (TODO)
 
 ### Usage:
 
