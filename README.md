@@ -1,18 +1,26 @@
-**Simple Javascript Splitter with no 3rd party dependencies.**
+### Features
+* Plug-n-Play
+* Horizontal or Vertical
+* Fixed or Collapsible
+* Dummy splitter to control on-drag behaviour
+* Responsive (Edge-case bugs being worked on)
+* Demo Layouts with links to fiddles
+* Zero dependencies
+* < 1KB Minified (Not checked in yet)
 
 ### Usage:
 
-    require(['Splitter'], function (Splitter) {
-        new Splitter({
-            elementOne: contentContainer,   // Div to the left of the splitter
+	require(['Splitter'], function (Splitter) {
+		new Splitter({
+			elementOne: contentContainer,   // Div to the left of the splitter
 			elementTwo: bottomDiv,          // Div to the right of the splitter
 			splitter: bottomsplitter,       // Splitter div
 			orientation: 'horizontal',      // Orientation [vertical | horizontal]
 			collapse: 'bottom',             // Collapse Direction [left | right | top | bottom | fixed]
 			dummySplitter: false,           // Move a dummy splitter instead of refreshing entire content
 			splitterHeight: '5px'           // Overwrite the splitter height / width
-        }).Render();
-    });
+		}).Render();
+	});
 
 ### Vertical splitter:
 ![25_screenshot 2014-02-16 15 56 47](https://f.cloud.github.com/assets/749084/2181793/f97e0612-9766-11e3-8bd4-97827cabe685.png)
