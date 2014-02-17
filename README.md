@@ -1,10 +1,10 @@
 ### Features
 * Plug-n-Play
-* Orientation: Horizontal | Vertical
-* Splitter: Fixed | Collapsible
-* Dummy splitter to control on-drag behaviour
+* Horizontal | Vertical
+* Fixed | Collapsible
+* Drag actual splitter or placeholder splitter
 * Responsive
-* Demo Layouts with links to fiddles
+* Functional demos of Complex Layouts
 * Zero dependencies
 * < 1KB Minified (TODO)
 
@@ -17,7 +17,7 @@
 			splitter: bottomsplitter,       // Splitter div
 			orientation: 'horizontal',      // Orientation [vertical | horizontal]
 			collapse: 'bottom',             // Collapse Direction [left | right | top | bottom | fixed]
-			dummySplitter: false,           // Move a dummy splitter instead of refreshing entire content
+			placeholderSplitter: false,     // Drag a placeholder splitter
 			splitterHeight: '5px'           // Overwrite the splitter height / width
 		}).Render();
 	});
