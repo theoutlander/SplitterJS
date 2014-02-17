@@ -41,3 +41,7 @@ http://jsfiddle.net/theoutlander/9NQ8g/
 ![23_screenshot 2014-02-16 15 51 10](https://f.cloud.github.com/assets/749084/2181792/f97da154-9766-11e3-9017-9b0b750a3f78.png)
 
 http://jsfiddle.net/theoutlander/ULFWP/
+
+***
+
+**Additional examples can be found in the Demo folder of the repository** 
