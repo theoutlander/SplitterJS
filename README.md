@@ -46,4 +46,4 @@ http://jsfiddle.net/theoutlander/ULFWP/
 
 ***
 
-**Additional examples can be found in the Demo folder of the repository** 
+### Additional examples can be found in the Demo folder of the repository
