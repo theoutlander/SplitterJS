@@ -1,3 +1,5 @@
+# [Splitter.js](http://theoutlander.github.io/SplitterJS/)
+
 ### Features
 * Plug-n-Play
 * Horizontal | Vertical
