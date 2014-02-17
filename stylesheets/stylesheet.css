@@ -165,7 +165,7 @@ pre {
 
 table {
   width: 100%;
-  margin: 0 0 20px 0;
+  /*margin: 0 0 20px 0;*/
 }
 
 th {
@@ -244,4 +244,19 @@ a {
 
 .cf {
   zoom:1;
+}
+
+#leftDiv {
+    left: 10%;
+    right: 45%;
+    position: absolute;
+    max-width: 45%;
+    /* border: 1px dashed #b5e853; */
+    /* padding: 10px; */
+}
+
+#rightDiv {
+    position: absolute;
+    left: 60%;
+    right: 5%;
 }
