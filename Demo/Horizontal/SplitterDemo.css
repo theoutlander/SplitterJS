@@ -1,0 +1,37 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    bottom: 0;
+}
+
+#left {
+    right: 50%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: lightblue;
+    position: absolute;
+}
+
+#right {
+    top: 0;
+    right: 0;
+    left: 50%;
+    background-color: lightgray;
+    position: absolute;
+    bottom: 0;
+}
+
+#centerSplitter {
+    width: 6px;
+    background: linear-gradient(to right, #21374c 0%, #004966 30%, #21374c 100%);
+}
+
+.unselectable {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

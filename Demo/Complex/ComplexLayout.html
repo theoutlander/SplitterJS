@@ -35,7 +35,7 @@
 			splitter: leftsplitter,         // Splitter div
 			orientation: 'vertical',        // Orientation [vertical | horizontal]
 			collapse: 'left',               // Collapse Direction [left | right | top | bottom | fixed]
-			dummySplitter: true             // Move a dummy splitter instead of refreshing entire content
+			placeholderSplitter: false      // Move a dummy splitter instead of refreshing entire content
 		}).Render();
 
 		new Splitter({
@@ -44,7 +44,7 @@
 			splitter: rightsplitter,        // Splitter div
 			orientation: 'vertical',        // Orientation [vertical | horizontal]
 			collapse: 'right',              // Collapse Direction [left | right | top | bottom | fixed]
-			dummySplitter: false            // Move a dummy splitter instead of refreshing entire content
+			placeholderSplitter: false      // Move a dummy splitter instead of refreshing entire content
 		}).Render();
 
 		Splitter({
@@ -53,8 +53,8 @@
 			splitter: topsplitter,          // Splitter div
 			orientation: 'horizontal',      // Orientation [vertical | horizontal]
 			collapse: 'fixed',              // Collapse Direction [left | right | top | bottom | fixed]
-			dummySplitter: false,           // Move a dummy splitter instead of refreshing entire content
-			splitterHeight: '0px'           // Control the splitter height
+			placeholderSplitter: false,     // Move a dummy splitter instead of refreshing entire content
+			splitterHeight: '1px'           // Control the splitter height
 		}).Render();
 
 		new Splitter({
@@ -63,7 +63,7 @@
 			splitter: bottomsplitter,       // Splitter div
 			orientation: 'horizontal',      // Orientation [vertical | horizontal]
 			collapse: 'bottom',             // Collapse Direction [left | right | top | bottom | fixed]
-			dummySplitter: false            // Move a dummy splitter instead of refreshing entire content
+			placeholderSplitter: false      // Move a dummy splitter instead of refreshing entire content
 		}).Render();
 	});
 </script>

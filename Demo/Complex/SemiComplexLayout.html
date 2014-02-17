@@ -21,21 +21,22 @@
 <script>
 	require(['../../Splitter'], function (Splitter) {
 		new Splitter({
-			elementOne: editor, // Div to the left of the splitter
-			elementTwo: content, // Div to the right of the splitter
-			splitter: leftsplitter, // Splitter div
-			orientation: 'vertical', // Orientation [vertical | horizontal]
-			collapse: 'left', // Collapse Direction [left | right | top | bottom]
-			dummySplitter: false // Move a dummy splitter instead of refreshing entire content
+			elementOne: editor,         // Div to the left of the splitter
+			elementTwo: content,        // Div to the right of the splitter
+			splitter: leftsplitter,     // Splitter div
+			orientation: 'vertical',    // Orientation [vertical | horizontal]
+			collapse: 'left',           // Collapse Direction [left | right | top | bottom]
+			placeholderSplitter: false  // Use a placeholder splitter on drag
 		}).Render();
 
 		new Splitter({
-			elementOne: map, // Div to the left of the splitter
-			elementTwo: timeline, // Div to the right of the splitter
-			splitter: topsplitter, // Splitter div
-			orientation: 'horizontal', // Orientation [vertical | horizontal]
-			collapse: 'bottom', // Collapse Direction [left | right | top | bottom]
-			dummySplitter: false // Move a dummy splitter instead of refreshing entire content
+			elementOne: map,            // Div to the left of the splitter
+			elementTwo: timeline,       // Div to the right of the splitter
+			splitter: topsplitter,      // Splitter div
+			orientation: 'horizontal',  // Orientation [vertical | horizontal]
+			collapse: 'bottom',         // Collapse Direction [left | right | top | bottom]
+			placeholderSplitter: false, // Use a placeholder splitter on drag
+			splitterHeight: '2px'       // Change the thickness of the splitter
 		}).Render();
 
 	});

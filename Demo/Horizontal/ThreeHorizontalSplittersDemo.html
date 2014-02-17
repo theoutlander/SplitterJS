@@ -25,7 +25,7 @@
 			splitter: headerSplitterDiv,    // Splitter div
 			orientation: 'horizontal',      // Orientation [vertical | horizontal]
 			collapse: 'top',                // Collapse Direction [left | right | top | bottom | fixed]
-			dummySplitter: false            // Move a dummy splitter instead of refreshing entire content
+			placeholderSplitter: false      // Use a placeholder splitter on drag
 		}).Render();
 
 		new Splitter({
@@ -34,7 +34,7 @@
 			splitter: splitterDiv,         // Splitter div
 			orientation: 'horizontal',     // Orientation [vertical | horizontal]
 			collapse: 'fixed',             // Collapse Direction [left | right | top | bottom | fixed]
-			dummySplitter: true            // Move a dummy splitter instead of refreshing entire content
+			placeholderSplitter: false     // Use a placeholder splitter on drag
 		}).Render();
 
 		new Splitter({
@@ -43,7 +43,7 @@
 			splitter: footerSplitterDiv,   // Splitter div
 			orientation: 'horizontal',     // Orientation [vertical | horizontal]
 			collapse: 'bottom',            // Collapse Direction [left | right | top | bottom | fixed]
-			dummySplitter: false           // Move a dummy splitter instead of refreshing entire content
+			placeholderSplitter: false     // Use a placeholder splitter on drag
 		}).Render();
 	});
 </script>
