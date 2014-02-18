@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Semi Complex Layout</title>
-	<link href="../../Splitter.css" type="text/css" rel="stylesheet">
-	<link href="SemiComplexLayout.css" type="text/css" rel="stylesheet">
-	<script src="http://requirejs.org/docs/release/2.1.10/minified/require.js"></script>
+    <title>Semi Complex Layout</title>
+    <link href="../../Splitter.css" type="text/css" rel="stylesheet">
+    <link href="SemiComplexLayout.css" type="text/css" rel="stylesheet">
+    <script src="http://requirejs.org/docs/release/2.1.10/minified/require.js" type="text/javascript"></script>
 </head>
 <body>
 
 <div id=viewport class=unselectable>
-	<div id=editor class=unselectable>Editor</div>
-	<div id=leftsplitter class=verticalSplitter></div>
-	<div id=content>
-		<div id=map class=unselectable>Map</div>
-		<div id=topsplitter class=horizontalSplitter></div>
-		<div id=timeline class=unselectable>Timeline</div>
-	</div>
+    <div id=editor class=unselectable></div>
+    <div id=leftsplitter class=verticalSplitter></div>
+    <div id=content>
+        <div id=map class=unselectable></div>
+        <div id=topsplitter class=horizontalSplitter></div>
+        <div id=timeline class=unselectable></div>
+    </div>
 </div>
 
 <script>
-	require(['../../Splitter'], function (Splitter) {
-		new Splitter({
-			elementOne: editor,         // Div to the left of the splitter
-			elementTwo: content,        // Div to the right of the splitter
-			splitter: leftsplitter,     // Splitter div
-			orientation: 'vertical',    // Orientation [vertical | horizontal]
-			collapse: 'left',           // Collapse Direction [left | right | top | bottom]
-			placeholderSplitter: false  // Use a placeholder splitter on drag
-		}).Render();
+    require(['../../Splitter'], function (Splitter) {
+        new Splitter({
+            elementOne: editor,         // Div to the left of the splitter
+            elementTwo: content,        // Div to the right of the splitter
+            splitter: leftsplitter,     // Splitter div
+            orientation: 'vertical',    // Orientation [vertical | horizontal]
+            collapse: 'left',           // Collapse Direction [left | right | top | bottom]
+            placeholderSplitter: false  // Use a placeholder splitter on drag
+        }).Render();
 
-		new Splitter({
-			elementOne: map,            // Div to the left of the splitter
-			elementTwo: timeline,       // Div to the right of the splitter
-			splitter: topsplitter,      // Splitter div
-			orientation: 'horizontal',  // Orientation [vertical | horizontal]
-			collapse: 'bottom',         // Collapse Direction [left | right | top | bottom]
-			placeholderSplitter: false, // Use a placeholder splitter on drag
-			splitterHeight: '2px'       // Change the thickness of the splitter
-		}).Render();
+        new Splitter({
+            elementOne: map,            // Div to the left of the splitter
+            elementTwo: timeline,       // Div to the right of the splitter
+            splitter: topsplitter,      // Splitter div
+            orientation: 'horizontal',  // Orientation [vertical | horizontal]
+            collapse: 'bottom',         // Collapse Direction [left | right | top | bottom]
+            placeholderSplitter: false, // Use a placeholder splitter on drag
+            splitterHeight: '2px'       // Change the thickness of the splitter
+        }).Render();
 
-	});
+    });
 </script>
 
 </body>

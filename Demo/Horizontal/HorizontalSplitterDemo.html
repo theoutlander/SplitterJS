@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SplitterJS - Horizontal Splitter Demo</title>
-	<link href="../../Splitter.css" type="text/css" rel="stylesheet">
-	<link href="./HorizontalSplitterDemo.css" rel="stylesheet" type="text/css">
-	<script src="http://www.requirejs.org/docs/release/2.1.10/minified/require.js"></script>
+    <title>SplitterJS - Horizontal Splitter Demo</title>
+    <link href="../../Splitter.css" type="text/css" rel="stylesheet">
+    <link href="./HorizontalSplitterDemo.css" rel="stylesheet" type="text/css">
+    <script src="http://www.requirejs.org/docs/release/2.1.10/minified/require.js" type="text/javascript"></script>
 </head>
 <body>
 
-<div id=topDiv class="unselectable">Top</div>
-<div id=bottomDiv class="unselectable">Bottom</div>
+<div id=topDiv class="unselectable"></div>
+<div id=bottomDiv class="unselectable"></div>
 <div id=splitterDiv class="horizontalSplitter"></div>
 
 <script>
-	require(['../../Splitter'], function (Splitter) {
-		new Splitter({
-			elementOne: topDiv,            // Div to the left of the splitter
-			elementTwo: bottomDiv,         // Div to the right of the splitter
-			splitter: splitterDiv,         // Splitter div
-			orientation: 'horizontal',     // Orientation [vertical | horizontal]
-			collapse: 'top',               // Collapse Direction [left | right | top | bottom]
-			placeholderSplitter: false     // Use a placeholder splitter on drag
-		}).Render();
-	});
+    require(['../../Splitter'], function (Splitter) {
+        new Splitter({
+            elementOne: topDiv,            // Div to the left of the splitter
+            elementTwo: bottomDiv,         // Div to the right of the splitter
+            splitter: splitterDiv,         // Splitter div
+            orientation: 'horizontal',     // Orientation [vertical | horizontal]
+            collapse: 'top',               // Collapse Direction [left | right | top | bottom]
+            placeholderSplitter: false     // Use a placeholder splitter on drag
+        }).Render();
+    });
 </script>
 
 </body>
